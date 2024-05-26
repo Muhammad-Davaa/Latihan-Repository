@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Program Menghitung Volume"
+        android:textColor="#6A0DAD"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Input Panjang -->
+    <TextView
+        android:id="@+id/panjangLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Panjang:"
+        app:layout_constraintTop_toBottomOf="@id/headerTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/panjangInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/panjangLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <!-- Input Lebar -->
+    <TextView
+        android:id="@+id/lebarLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lebar:"
+        app:layout_constraintTop_toBottomOf="@id/panjangInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/lebarInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/lebarLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <!-- Input Tinggi -->
+    <TextView
+        android:id="@+id/tinggiLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tinggi:"
+        app:layout_constraintTop_toBottomOf="@id/lebarInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/tinggiInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/tinggiLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <!-- Button Hitung -->
+    <Button
+        android:id="@+id/hitungButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#808080"
+        android:textColor="@android:color/white"
+        android:text="HITUNG"
+        app:layout_constraintStart_toStartOf="@id/tinggiLabel"
+        app:layout_constraintEnd_toEndOf="@id/tinggiInput"
+        app:layout_constraintTop_toBottomOf="@id/tinggiInput" />
+
+    <TextView
+        android:id="@+id/hasilVolumeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil Volume Balok"
+        android:textSize="15sp"
+        android:textColor="#6A0DAD"
+        app:layout_constraintTop_toBottomOf="@id/hitungButton"
+        app:layout_constraintStart_toStartOf="@id/hitungButton"
+        app:layout_constraintEnd_toEndOf="@id/hitungButton"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/hasilVolumeTextViewDua"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hasil Volume Balok"
+        android:textSize="20sp"
+        android:textColor="#6A0DAD"
+        app:layout_constraintTop_toBottomOf="@id/hasilVolumeTextView"
+        app:layout_constraintStart_toStartOf="@id/hitungButton"
+        app:layout_constraintEnd_toEndOf="@id/hitungButton"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#808080"
+        android:textColor="@android:color/white"
+        android:text="Next"
+        app:layout_constraintStart_toStartOf="@id/hitungButton"
+        app:layout_constraintEnd_toEndOf="@id/hitungButton"
+        app:layout_constraintTop_toBottomOf="@id/hasilVolumeTextViewDua" />
+
+    <Button
+        android:id="@+id/sampleFragmentButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#808080"
+        android:textColor="@android:color/white"
+        android:text="SAMPLE FRAGMENT"
+        app:layout_constraintStart_toStartOf="@id/hitungButton"
+        app:layout_constraintEnd_toEndOf="@id/hitungButton"
+        app:layout_constraintTop_toBottomOf="@id/nextButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
